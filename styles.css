@@ -1,6 +1,5 @@
 *, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 body {
@@ -14,8 +13,7 @@ body {
 
 table {
   border-spacing: 0;
-  border-collapse: collapse;
-  text-align: left;
+  border-collapse: separate;
   padding-bottom: 25px;
 }
 
@@ -35,15 +33,11 @@ span#clear:hover {
   background-color: #eee;
 }
 
-td {
+td, th {
+  border: 1px solid #eee;
   padding: 0.4em;
   text-align: center;
-  border: 1px solid #ccc;
   user-select: none;
-}
-
-td, th {
-  border-bottom: 1px solid #ccc;
 }
 
 tr:first-of-type, tr td:first-of-type {

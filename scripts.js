@@ -20,6 +20,7 @@ button.addEventListener('click', function(e) {
 for (let i=0; i<cells.length; i++) {
  
   cells[i].addEventListener('click', function(e) {
+    this.style.border = '1px solid black';
     if (this.dataset.checked === 'x') {
       this.dataset.checked = '';
       this.style.backgroundColor = '#fff';
