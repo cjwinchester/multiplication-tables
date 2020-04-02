@@ -1,0 +1,55 @@
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+body {
+  font-size: 20px;
+  font-family: "Consolas", "Courier New", monospace;
+  line-height: 1.3;
+  margin: 40px auto;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: left;
+  padding-bottom: 25px;
+}
+
+p {
+  text-align: center;
+}
+
+td {
+  padding: 0.4em;
+  text-align: center;
+  border: 1px solid #ccc;
+  user-select: none;
+}
+
+td, th {
+  border-bottom: 1px solid #ccc;
+}
+
+tr:first-of-type, tr td:first-of-type {
+  font-weight: bold;
+}
+
+tr:first-of-type {
+  border-bottom: 3px black solid;
+}
+
+tr td:first-of-type {
+  border-right: 3px black solid;;
+}
+
+tr:not(:first-of-type) td:not(:first-of-type) {
+  cursor: pointer;
+}
+
+tr:not(:first-of-type) td:not(:first-of-type):hover {
+  background-color: #eee;
+}
