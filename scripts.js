@@ -20,15 +20,18 @@ button.addEventListener('click', function(e) {
 for (let i=0; i<cells.length; i++) {
  
   cells[i].addEventListener('click', function(e) {
-    this.style.border = '1px solid black';
-    if (this.dataset.checked === 'x') {
-      this.dataset.checked = '';
-      this.style.backgroundColor = '#fff';
-      count_correct -=1;
-    } else {
-      this.dataset.checked = 'x';
+
+    if (!this.dataset.response) {
       this.style.backgroundColor = '#9AFF95';
+      this.dataset.response = 'correct';
       count_correct +=1;
+    } else if (this.dataset.response === 'correct') {
+      this.dataset.response = 'incorrect';
+      this.style.backgroundColor = 'tomato';
+      count_correct -=1;
+    } else if (this.dataset.response === 'incorrect') {
+      delete this.dataset.response;
+      this.style.backgroundColor = '#fff';
     }
     score.innerHTML = count_correct;
     total_pct.innerHTML = ((count_correct / total) * 100).toFixed(2);
