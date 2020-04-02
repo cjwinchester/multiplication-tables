@@ -23,6 +23,18 @@ p {
   text-align: center;
 }
 
+span#clear {
+  text-align: center;
+  font: 12pt/1.1 Arial, sans-serif;
+  border: 1px solid #ccc;
+  padding: 3px 5px;
+  cursor: pointer;
+}
+
+span#clear:hover {
+  background-color: #eee;
+}
+
 td {
   padding: 0.4em;
   text-align: center;
